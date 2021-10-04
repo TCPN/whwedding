@@ -1,0 +1,308 @@
+:root {
+	--homepage-color1: #EA9999;
+	--homepage-color1-aux: #E6B8AF;
+	--homepage-color2: #45818E;
+	--homepage-color2-aux: #76A5AF;
+	--page-color2: #c27ba0;
+}
+body {
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    background: center / cover no-repeat url(/asset/images/background.jpg);
+}
+.screen-reader-text, .site-branding, .ui-state {
+	height: 0;
+	width: 0;
+	overflow: hidden;
+	visibility: hidden;
+	position: fixed;
+}
+
+.hidden {
+	display: none;
+}
+
+.is-style-rounded {
+    border-radius: 50%;
+}
+
+.inline-block {
+	display: inline-block;
+}
+.pic-anchor {
+	position: relative;
+    width: 0;
+    height: 0;
+}
+
+header {
+	display: flex;
+	justify-content: flex-end;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    row-gap: 2em;
+}
+.menu-button-container {
+	display: none
+}
+.menu-wrapper {
+	display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    list-style: none;
+    position: relative;
+	padding: 0 2em;
+}
+.dropdown-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1em;
+	font-size: 1.3em;
+}
+@media only screen and (max-width: 480px) {
+	.menu-button-container {
+		display: flex;
+		justify-content: flex-end;
+	}
+	#show-nav-menu.ui-state:checked + #site-navigation {
+		display: block;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: #ededed;
+		z-index: 1;
+	}
+	#show-nav-menu.ui-state:checked  + #site-navigation .menu-button-container .dropdown-icon.open {
+		display: none;
+	}
+	#show-nav-menu.ui-state:not(:checked)  + #site-navigation .menu-button-container .dropdown-icon.close {
+		display: none;
+	}
+	#show-nav-menu.ui-state:not(:checked)  + #site-navigation .primary-menu-container {
+		display: none;
+	}
+	#show-nav-menu.ui-state:checked  + #site-navigation .primary-menu-container {
+		display: block;
+	}
+	.menu-wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		list-style: none;
+		position: relative;
+		padding: 0 2em;
+	}
+}
+.menu-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.menu-item > a {
+	display: block;
+	font-size: 1.5em;
+	padding: 0.5em;
+	text-decoration: none;
+	color: #000;
+}
+.menu-item > a:hover {
+	text-decoration: underline dotted #000 2px;
+}
+footer.site-footer {
+	display: none;
+}
+.homepage-content {
+	margin: auto;
+	max-width: max-content !important;
+}
+.homepage-title-container {
+	justify-content: center;
+	align-items: center;
+	min-width: calc(100% - 4em);
+}
+.homepage-title-block {
+	margin: 2rem auto;
+	color: var(--homepage-color1);
+    width: fit-content;
+}
+.homepage-title-eventname {
+	letter-spacing: calc(1ex / 5 / 2);
+}
+.homepage-title-block .parents-section {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: right;
+}
+.homepage-title-block .parents-section .parents {
+	max-width: fit-content;
+	border-left: 3px solid;
+	padding: 0 0.5em;
+	color: #E6B8AF;
+	font-weight: 400;
+	font-size: 1.7rem;
+}
+.homepage-title-block .pic-anchor div {
+	position: absolute;
+	right: 0;
+	top: 0;
+	background: center / contain no-repeat url(/asset/images/cross-cute.png);
+    width: 144px;
+    height: 12em;
+}
+.homepage-title {
+    font-size: 3rem;
+    margin: 0;
+}
+.homepage-pictures {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.homepage-pictures .wp-block-image {
+	margin: 0.5em;
+}
+.homepage-info {
+	font-family: Georgia;
+	font-size: 2em;
+	padding-left: 1em;
+    text-align: center;
+	max-width: max-content;
+    margin: auto;
+    padding: 1em;
+}
+.homepage-info > * {
+	margin-bottom: 0.5em;
+}
+.homepage-info-datetime {
+	color: var(--homepage-color2);
+	font-weight: bold;
+	line-height: 1.5em;
+	word-spacing: 0.5em;
+}
+.homepage-info-datetime [data-role="year"] {
+	font-size: 1em;
+}
+.homepage-info-datetime [data-role="month"], .homepage-info-datetime [data-role="date"] {
+	font-size: 2em;
+}
+.homepage-info-location {
+	color: var(--homepage-color1);
+	line-height: 1em;
+	font-weight: bold;
+}
+.homepage-info-location [data-role="address"] {
+	color: var(--homepage-color1-aux);
+	font-size: 0.8em;
+}
+.homepage-info-location .pic-anchor {
+	display: inline-block;
+}
+.homepage-info-location .pic-anchor div {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: center / contain no-repeat url(/asset/images/rings-and-heart.png);
+    width: 144px;
+    height: 144px;
+}
+.homepage-info-details {
+	word-spacing: 1em;
+	color: var(--homepage-color2-aux);
+}
+.homepage-info-details > span {
+	word-spacing: initial;
+}
+
+/* styles of pages */
+
+.page-title {
+	color: var(--homepage-color2);
+}
+.page-title::after {
+	content: " ";
+	display: block;
+	width: 9ch;
+	height: 0.45ch;
+	background-color: var(--homepage-color2);
+}
+
+.content-container {
+	color: var(--page-color2);
+	width: fit-content;
+	margin: auto;
+	margin-bottom: 10rem;
+}
+
+.content-container section h3::before {
+	content: "|";
+	display: inline-block;
+	font-weight: bold;
+	margin: 0 0.5em;
+	width: 0.3ex;
+	background: var(--page-color2);
+}
+
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+	justify-items: center;
+
+}
+
+.two-columns div {
+    width: 20em;
+
+}
+
+.preserve-ws {
+	white-space: pre;
+}
+
+.content-container h1, .content-container section {
+    margin: 2em 10rem;
+}
+
+@media only screen and (max-width: 900px) {
+	.content-container h1, .content-container section {
+		margin: 2em 3rem
+	}
+}
+@media only screen and (max-width: 700px) {
+	.two-columns {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+}
+
+
+#about-us ul {
+	list-style: none;
+	padding-left: 1em;
+}
+
+#about-us .year {
+	display: inline-block;
+	width: 4ex;
+	margin-right: 1em;
+}
+
+#special-thanks .item-name {
+	display: inline;
+	width: 6em;
+}
+#special-thanks .item-name::after {
+	display: inline-block;
+	content: "｜";
+	margin: 0 0.5em;
+}
+#special-thanks .persons {
+	display: inline-block;
+	width: 24em;
+	vertical-align: top;
+}
