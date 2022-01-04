@@ -10,6 +10,7 @@ body {
     width: 100%;
     min-height: 100vh;
     background: center / cover no-repeat url(/asset/images/background.jpg);
+    background: center / 5px 5px repeat linear-gradient(135deg, #eee, #eee 49%, #ccc 49%, #ccc 51%, #eee 51%, #eee);
 }
 .screen-reader-text, .site-branding, .ui-state {
 	height: 0;
