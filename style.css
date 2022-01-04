@@ -292,6 +292,10 @@ footer.site-footer {
 	margin-right: 1em;
 }
 
+#about-us li.year-sep {
+	height: 1em;
+}
+
 #special-thanks .item-name {
 	display: inline;
 	width: 6em;
