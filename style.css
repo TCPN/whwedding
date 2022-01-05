@@ -106,6 +106,10 @@ header {
 	justify-content: center;
 	align-items: center;
 }
+.menu-item.current-menu-item {
+	background-color: #c773;
+	border-radius: 0.5em;
+}
 .menu-item > a {
 	display: block;
 	font-size: 1.5em;
