@@ -148,6 +148,7 @@ footer.site-footer {
 	color: #E6B8AF;
 	font-weight: 400;
 	font-size: 1.7rem;
+	text-shadow: 0.5px 0 #E6B8AF;
 }
 .homepage-title-block .pic-anchor div {
 	position: absolute;
