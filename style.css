@@ -322,6 +322,37 @@ h3 {
 	height: 1em;
 }
 
+#wedding-place img {
+	max-height: 400px;
+	max-width: 100%;
+}
+
+#wedding-place figure {
+	text-align: center;
+}
+
+.place-content {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.place-content figure:first-child {
+	grid-column: span 2;
+}
+
+.place-content figure:first-child img {
+	max-height: none;
+	width: 100%;
+	aspect-ratio: 1;
+	object-fit: cover;
+}
+
+@media only screen and (max-width: 700px) {
+	figure {
+		margin: 0.7em 1.5em;
+	}
+}
+
 #wedding-procedure-content {
 	overflow: auto;
 	max-width: max-content;
